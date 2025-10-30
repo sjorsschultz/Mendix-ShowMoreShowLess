@@ -1,0 +1,25 @@
+{
+    "version": "4.9.4",
+    "watched": [
+        {
+            "triggers": [],
+            "path": "C:/MxProjects/WidgetDevelopment/showMoreShowLess/test/deployment/native"
+        },
+        {
+            "triggers": [],
+            "path": "C:/MxProjects/WidgetDevelopment/showMoreShowLess/test/theme"
+        },
+        {
+            "triggers": [],
+            "path": "C:/MxProjects/WidgetDevelopment/showMoreShowLess/test/javascriptsource"
+        },
+        {
+            "triggers": [],
+            "path": "C:/MxProjects/WidgetDevelopment/showMoreShowLess/test/themesource"
+        },
+        {
+            "triggers": [],
+            "path": "C:/Program Files/Mendix/10.24.3.76411/modeler/tools/node/node_modules"
+        }
+    ]
+}

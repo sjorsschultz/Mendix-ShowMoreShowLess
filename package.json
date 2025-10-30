@@ -1,0 +1,40 @@
+{
+  "name": "showmoreshowless",
+  "widgetName": "ShowMoreShowLess",
+  "version": "1.0.0",
+  "description": "Displays long text with a 'Show more / Show less' option for Mendix Native apps. Includes smooth animation, ellipsis truncation and full styling flexibility via class names.",
+  "copyright": "Blue Alpaca B.V. 2025",
+  "author": "Sjors Schultz",
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "Apache V2",
+  "config": {
+    "projectPath": "./test"
+  },
+  "packagePath": "bluealpaca",
+  "scripts": {
+    "start": "pluggable-widgets-tools start:native",
+    "dev": "pluggable-widgets-tools start:server --watch && if exist dist\\1.0.0\\bluealpaca.ShowMoreShowLess.mpk (copy /Y dist\\1,0,0\\bluealpaca.ShowMoreShowLess.mpk \"C:\\MxProjects\\WidgetDevelopment\\showMoreShowLess\\test\\widgets\\bluealpaca.ShowMoreShowLess.mpk\") else (echo MPK not found in dist folder!)",
+    "build": "pluggable-widgets-tools build:native && if exist dist\\1.0.0\\bluealpaca.ShowMoreShowLess.mpk (copy /Y dist\\1.0.0\\bluealpaca.ShowMoreShowLess.mpk \"C:\\MxProjects\\WidgetDevelopment\\showMoreShowLess\\test\\widgets\\bluealpaca.ShowMoreShowLess.mpk\") else (echo MPK not found in dist folder!)",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "prerelease": "npm run lint",
+    "release": "pluggable-widgets-tools release:native"
+  },
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^10.15.0",
+    "@types/big.js": "^6.0.2"
+  },
+  "dependencies": {},
+  "resolutions": {
+    "react": "^18.2.0",
+    "@types/react": "^18.2.0",
+    "react-native": "0.77.3"
+  },
+  "overrides": {
+    "react": "^18.2.0",
+    "@types/react": "^18.2.0",
+    "react-native": "0.77.3"
+  }
+}

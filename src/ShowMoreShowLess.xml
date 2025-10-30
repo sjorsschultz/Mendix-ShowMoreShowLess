@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget
+  id="bluealpaca.showmoreshowless.ShowMoreShowLess"
+  pluginWidget="true"
+  needsEntityContext="true"
+  supportedPlatform="Native"
+  xmlns="http://www.mendix.com/widget/1.0/">
+
+  <name>Show More / Show Less</name>
+  <description>
+  </description>
+
+  <properties>
+
+    <property key="textAttribute" type="attribute" required="true">
+      <caption>Text attribute</caption>
+      <category>General</category>
+      <description>Select the string attribute to display in the widget.</description>
+      <attributeTypes>
+        <attributeType name="String" />
+      </attributeTypes>
+    </property>
+
+    <property key="numberOfLines" type="integer" required="true" defaultValue="3">
+      <caption>Collapsed line count</caption>
+      <category>General</category>
+      <description>Number of lines visible before showing the “Show more” button.</description>
+    </property>
+
+    <property key="showMoreCaption" type="string" required="false" defaultValue="Show more">
+      <caption>Show more caption</caption>
+      <category>General</category>
+      <description>Text shown for expanding the content.</description>
+    </property>
+
+    <property key="showLessCaption" type="string" required="false" defaultValue="Show less">
+      <caption>Show less caption</caption>
+      <category>General</category>
+      <description>Text shown for collapsing the content.</description>
+    </property>
+
+    <property key="containerClass" type="string" required="false">
+      <caption>Container class</caption>
+      <category>General</category>
+      <description>Optional class for container styling.</description>
+    </property>
+
+    <property key="linkClass" type="string" required="false">
+      <caption>Link caption class</caption>
+      <category>General</category>
+      <description>Class name for styling the “Show more / Show less” text, e.g. textSecondary or btnLink.</description>
+    </property>
+
+  </properties>
+</widget>

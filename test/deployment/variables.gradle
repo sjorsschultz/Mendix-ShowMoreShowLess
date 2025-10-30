@@ -1,0 +1,35 @@
+ext {
+	mendixJavaVersion = 21
+	mendixInstallDir = "C:/Program Files/Mendix/10.24.3.76411"
+	projectName = "ShowMoreShowLess"
+	projectSafeName = "test"
+	mendixProjectDir = "C:/MxProjects/WidgetDevelopment/showMoreShowLess/test"
+	deploymentDir = "C:/MxProjects/WidgetDevelopment/showMoreShowLess/test/deployment"
+	dataSnapshotFile = "C:/MxProjects/WidgetDevelopment/showMoreShowLess/test/data-snapshot.zip"
+	dataDir = "C:/MxProjects/WidgetDevelopment/showMoreShowLess/test/deployment/data"
+	extractDataSnapshot = false
+	templatesDir = "C:/Program Files/Mendix/10.24.3.76411/modeler/runtemplates"
+	runDir = "run"
+	compileTargetDir = "run/bin"
+	deploymentDirName = "deployment"
+	modelDirName = "model"
+	resourcesDirName = "resources"
+	javaSourceDirName = "javasource"
+	libDirName = "lib"
+	userlibDirName = "userlib"
+	vendorlibDirName = "vendorlib"
+	generateFullDebugInfo = false
+	excludedRunTemplatesFiles = [
+		"**/*.template"
+	]
+	publicApiJars = [
+		"runtime/bundles/com.mendix.json.jar",
+		"runtime/bundles/com.mendix.logging-api.jar",
+		"runtime/bundles/com.mendix.m2ee-api.jar",
+		"runtime/bundles/com.mendix.public-api.jar",
+		"runtime/bundles/org.eclipse.jetty.toolchain.jetty-servlet-api.jar",
+		"runtime/bundles/org.eclipse.jetty.toolchain.jetty-javax-websocket-api.jar"
+	]
+	excludedJars = []
+	protectedModules = []
+}

@@ -1,0 +1,67 @@
+Initialized native services in: C:\Users\Schultz_S\.gradle\native
+Initialized jansi services in: C:\Users\Schultz_S\.gradle\native
+Received JVM installation metadata from 'C:\Program Files\Eclipse Adoptium\jdk-21.0.3.9-hotspot': {JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-21.0.3.9-hotspot, JAVA_VERSION=21.0.3, JAVA_VENDOR=Eclipse Adoptium, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=21.0.3+9-LTS, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=21.0.3+9-LTS, VM_VENDOR=Eclipse Adoptium, OS_ARCH=amd64}
+The client will now receive all logging from the daemon (pid: 11284). The daemon log file: C:\Users\Schultz_S\.gradle\daemon\8.5\daemon-11284.out.log
+Starting 41st build in daemon [uptime: 4 hrs 39 mins 9.841 secs, performance: 100%, GC rate: 0.00/s, heap usage: 0% of 512 MiB, non-heap usage: 21% of 384 MiB]
+Using 20 worker leases.
+Now considering [C:\MxProjects\WidgetDevelopment\showMoreShowLess\test\deployment] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file 'C:\MxProjects\WidgetDevelopment\showMoreShowLess\test\deployment\settings.gradle'.
+Projects loaded. Root project using build file 'C:\MxProjects\WidgetDevelopment\showMoreShowLess\test\deployment\build.gradle'.
+Included projects: [root project 'deployment']
+
+> Configure project :
+Evaluating root project 'deployment' using build file 'C:\MxProjects\WidgetDevelopment\showMoreShowLess\test\deployment\build.gradle'.
+All projects evaluated.
+Task name matched 'clean-excluded-jars'
+Task name matched 'deploy'
+Selected primary task 'clean-excluded-jars' from project :
+Selected primary task 'deploy' from project :
+Tasks to be executed: [task ':clean-excluded-jars', task ':copyDeploymentArtifacts', task ':copyLibs', task ':copyResources', task ':unzipDataSnapshot', task ':deploy']
+Tasks that were excluded: []
+Resolve mutations for :clean-excluded-jars (Thread[#2105,Execution worker,5,main]) started.
+:clean-excluded-jars (Thread[#2105,Execution worker,5,main]) started.
+destroyer locations for task group 0 (Thread[#2119,Execution worker Thread 15,5,main]) started.
+
+> Task :clean-excluded-jars UP-TO-DATE
+Caching disabled for task ':clean-excluded-jars' because:
+  Build cache is disabled
+Task ':clean-excluded-jars' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Resolve mutations for :copyDeploymentArtifacts (Thread[#2105,Execution worker,5,main]) started.
+:copyDeploymentArtifacts (Thread[#2105,Execution worker,5,main]) started.
+
+> Task :copyDeploymentArtifacts
+Caching disabled for task ':copyDeploymentArtifacts' because:
+  Build cache is disabled
+Task ':copyDeploymentArtifacts' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Resolve mutations for :copyLibs (Thread[#2105,Execution worker,5,main]) started.
+:copyLibs (Thread[#2113,Execution worker Thread 9,5,main]) started.
+
+> Task :copyLibs NO-SOURCE
+Skipping task ':copyLibs' as it has no source files and no previous output files.
+Resolve mutations for :copyResources (Thread[#2113,Execution worker Thread 9,5,main]) started.
+:copyResources (Thread[#2113,Execution worker Thread 9,5,main]) started.
+
+> Task :copyResources NO-SOURCE
+Skipping task ':copyResources' as it has no source files and no previous output files.
+Resolve mutations for :unzipDataSnapshot (Thread[#2113,Execution worker Thread 9,5,main]) started.
+:unzipDataSnapshot (Thread[#2113,Execution worker Thread 9,5,main]) started.
+
+> Task :unzipDataSnapshot SKIPPED
+Skipping task ':unzipDataSnapshot' as task onlyIf 'Task is enabled' is false.
+Resolve mutations for :deploy (Thread[#2121,Execution worker Thread 17,5,main]) started.
+:deploy (Thread[#2108,Execution worker Thread 4,5,main]) started.
+
+> Task :deploy
+Skipping task ':deploy' as it has no actions.
+
+BUILD SUCCESSFUL in 1s
+2 actionable tasks: 1 executed, 1 up-to-date
+Watched directory hierarchies: [C:\MxProjects\WidgetDevelopment\showMoreShowLess\test\deployment]
+
+
+
