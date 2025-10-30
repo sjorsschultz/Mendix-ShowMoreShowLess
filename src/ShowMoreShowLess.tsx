@@ -1,3 +1,4 @@
+// ... existing imports ...
 import { createElement, useState, useEffect, useCallback } from "react";
 import {
   View,
@@ -11,6 +12,7 @@ import {
 } from "react-native";
 import { DynamicValue } from "mendix";
 
+// ... helper function ...
 function flattenStyles(style: any): ViewStyle | TextStyle {
   if (!style) return {};
   if (Array.isArray(style)) {
@@ -42,6 +44,17 @@ export function ShowMoreShowLess(props: ShowMoreShowLessProps): JSX.Element {
   const [expanded, setExpanded] = useState(false);
   const [needsMoreButton, setNeedsMoreButton] = useState(false);
 
+  // iOS-specific refresh hack
+  const [refresh, setRefresh] = useState(false);
+
+  useEffect(() => {
+    if (Platform.OS === "ios") {
+      // Forces update after mount to reliably fire onTextLayout on iOS
+      const timer = setTimeout(() => setRefresh(r => !r), 100);
+      return () => clearTimeout(timer);
+    }
+  }, [text]);
+
   const onTextLayout = useCallback((e: NativeSyntheticEvent<TextLayoutEventData>) => {
     const hasEnoughLines = e.nativeEvent.lines.length > numberOfLines;
     setNeedsMoreButton(hasEnoughLines);
@@ -70,25 +83,29 @@ export function ShowMoreShowLess(props: ShowMoreShowLessProps): JSX.Element {
         numberOfLines={expanded ? undefined : numberOfLines}
         ellipsizeMode="tail"
         onTextLayout={onTextLayout}
-        style={{ 
+        style={{
           flexShrink: 1,
           flexWrap: 'wrap',
           width: '100%'
         }}
+        key={Platform.OS === "ios" ? (refresh ? "refresh1" : "refresh0") : undefined}
       >
         {text}
       </Text>
 
       {needsMoreButton && (
-        <TouchableOpacity 
+        <TouchableOpacity
           onPress={toggleExpanded}
           style={{ alignSelf: 'flex-start' }}
         >
-          <Text style={[{ 
-            marginTop: 4, 
-            color: 'blue', 
-            textDecorationLine: 'underline'
-          }, linkStyle]}>
+          <Text style={[
+            {
+              marginTop: 4,
+              color: 'blue',
+              textDecorationLine: 'underline'
+            },
+            linkStyle
+          ]}>
             {expanded ? showLessCaption : showMoreCaption}
           </Text>
         </TouchableOpacity>
